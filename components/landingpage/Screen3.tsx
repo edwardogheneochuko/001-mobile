@@ -1,14 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { View, useWindowDimensions } from "react-native"
 
-const Screen3 = () => {
+export default function Screen3() {
+  const { height } = useWindowDimensions()
+
   return (
-    <View>
-      <Text>Screen3</Text>
+    <View
+      style={{ minHeight: height }}
+      className="justify-center items-center bg-black px-4"
+    >
+      {/* your content */}
     </View>
   )
 }
-
-export default Screen3
-
-const styles = StyleSheet.create({})
